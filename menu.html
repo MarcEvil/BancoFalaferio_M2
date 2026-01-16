@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Falaferia - Menú</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <!-- <style>
+        body { background-color: #f8f9fa; }
+        .card-balance {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        .btn-action {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .btn-action:hover { transform: translateY(-5px); }
+    </style> -->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="menu.html">
+                <strong>Banco Falaferia</strong>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="menu.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deposit.html">Depositar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="retiro.html">Retirar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sendmoney.html">Enviar Dinero</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transactions.html">Movimientos</a></li>
+                </ul>
+
+                <button class="btn btn-outline-danger my-2 my-sm-0" id="btnCerrarSesion">
+                    Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+
+                <div class="card-balance">
+                    <h5 class="text-uppercase" style="opacity: 0.8;">Saldo Disponible</h5>
+                    <h1 id="saldoActual" class="display-3 font-weight-bold">$60.000</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <a href="deposit.html" class="btn btn-primary btn-block btn-action shadow">
+                            <span>💰 Depositar</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="sendmoney.html" class="btn btn-success btn-block btn-action shadow">
+                            <span>💸 Enviar Dinero</span>
+                        </a>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <a href="transactions.html" class="btn btn-block shadow" id="movimientos">
+                            <span>📋 Ver Últimos Movimientos</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/menu.js"></script>
+
+    <script>
+        document.getElementById('btnCerrarSesion')?.addEventListener('click', () => {
+            if (confirm("¿Seguro que quieres cerrar sesión? Se reiniciarán tus datos de prueba.")) {
+
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+
+</html>
