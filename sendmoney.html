@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Enviar Dinero</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/sendmoney.css">
+  
+</head>
+<body>
+
+  <div class="container col-6">
+    <h2 class="text-center">Enviar Dinero</h2>
+    <hr>
+
+    <div class="form-group">
+      <label for="searchContact">Buscar contacto:</label>
+      <input type="text" id="searchContact" class="form-control" placeholder="Escribe para buscar...">
+    </div>
+    
+    <button type="button" class="btn btn-outline-primary btn-block mb-4" id="btnAbrirModal">
+      + Agregar nuevo contacto
+    </button>
+
+    <h3>Agenda de Contactos</h3>
+    <ul id="contactList" class="list-group mb-4">
+      <p id="emptyMessage" class="text-muted text-center">No hay contactos agregados.</p>
+    </ul>
+
+    <button type="button" class="btn btn-primary btn-block btn-lg" id="btnEnviarDinero">
+      Enviar dinero al seleccionado
+    </button>
+    
+    <a href="menu.html" class="btn btn-secondary btn-block mt-3">Volver al Menú Principal</a>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="modalContacto" class="modal-custom">
+    <h4>Nuevo Contacto</h4>
+    <hr>
+    <div class="form-group">
+      <input type="text" id="newName" class="form-control mb-2" placeholder="Nombre y Apellido">
+      <input type="text" id="newCbu" class="form-control mb-2" placeholder="Número de CBU">
+      <input type="text" id="newAlias" class="form-control mb-2" placeholder="Alias">
+      <input type="text" id="newBank" class="form-control mb-2" placeholder="Nombre del Banco">
+    </div>
+    <button id="btnGuardarContacto" class="btn btn-success btn-block">Guardar en Agenda</button>
+    <button id="btnCancelarModal" class="btn btn-link btn-block text-danger">Cancelar</button>
+  </div>
+
+  <script src="assets/js/sendmoney.js"></script>
+</body>
+</html>
