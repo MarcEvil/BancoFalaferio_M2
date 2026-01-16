@@ -1,0 +1,113 @@
+/* Paleta de colores unificada */
+:root {
+    --purple-main: #6a11cb;
+    --purple-gradient: linear-gradient(180deg, #7f00ff, #e100ff);
+    --bg-light: #fcfcfc;
+    --white: #ffffff;
+    --green-success: #28a745;
+    --red-danger: #dc3545;
+}
+
+/* CONFIGURACIÓN PARA CENTRADO TOTAL */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+/* ENCABEZADO PÚRPURA */
+.header-wallet {
+    width: 100%;
+    background: var(--purple-gradient);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 10px 25px rgba(127, 0, 255, 0.2);
+}
+
+.header-wallet h2 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* TARJETA DE HISTORIAL (CENTRADA Y FLOTANTE) */
+.container-history {
+    width: 95%;
+    max-width: 500px;
+    margin: -40px auto 40px auto;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* ESTILO DE LA LISTA DE MOVIMIENTOS */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.movimiento-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.movimiento-tipo {
+    font-weight: 600;
+    color: #333;
+}
+
+.movimiento-fecha {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* COLORES SEGÚN EL TIPO DE MONTO */
+.monto-positivo {
+    color: var(--green-success);
+    font-weight: 700;
+}
+
+.monto-negativo {
+    color: var(--red-danger);
+    font-weight: 700;
+}
+
+/* BOTÓN VOLVER */
+.btn-secondary {
+    display: block;
+    width: 100%;
+    background-color: transparent !important;
+    border: 2px solid #eee !important;
+    color: #888 !important;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    color: var(--purple-main) !important;
+    border-color: var(--purple-main) !important;
+    background-color: #fcfaff !important;
+}

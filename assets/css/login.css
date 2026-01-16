@@ -1,0 +1,72 @@
+/* Estilos para el Login - Estética Fintech */
+body {
+    background: linear-gradient(180deg, #7f00ff, #e100ff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+}
+
+.container.card {
+    max-width: 400px;
+    width: 90%;
+    padding: 40px 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    margin-left: 5px;
+}
+
+.form-control {
+    border-radius: 15px;
+    padding: 25px 15px;
+    border: 1px solid #eee;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    border-color: #7f00ff;
+    background-color: #fff;
+}
+
+#btnLog {
+    width: 100%; /* El botón ocupa todo el ancho en móviles */
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #7f00ff, #e100ff);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px !important;
+}
+
+#btnLog:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 0, 255, 0.4);
+}
+
+#btnLog:active {
+    transform: translateY(0);
+}

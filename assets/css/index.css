@@ -1,0 +1,78 @@
+/* Paleta de colores unificada */
+:root {
+    --purple-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --indigo-dark: #1a1a2e;
+    --white: #ffffff;
+    --shadow-strong: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Configuración de Fondo de Pantalla Completa */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Imagen de fondo ajustada */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('/assets/img/falaferia.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Contenedor Principal (Tarjeta Flotante) */
+.main-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px); /* Efecto de vidrio */
+    -webkit-backdrop-filter: blur(15px);
+    margin-bottom: 30%;
+    padding: 40px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-shadow: var(--shadow-strong);
+    width: 90%;
+    max-width: 450px;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.slogan {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Botón Ingresar */
+#btnIngresar {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    padding: 18px 0;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+}
+
+#btnIngresar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(106, 17, 203, 0.6);
+    filter: brightness(1.1);
+}
+
+#btnIngresar:active {
+    transform: translateY(0);
+}

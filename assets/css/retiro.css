@@ -1,0 +1,120 @@
+/* Paleta de colores unificada */
+:root {
+    --purple-main: #6a11cb;
+    --purple-gradient: linear-gradient(180deg, #7f00ff, #e100ff);
+    --bg-light: #fcfcfc;
+    --white: #ffffff;
+    --warm-gradient: linear-gradient(90deg, #ff8c00, #ed1c24); /* Naranja/Rojo para retiro */
+}
+
+/* CONFIGURACIÓN PARA CENTRADO TOTAL */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+/* ENCABEZADO PÚRPURA */
+.header-wallet {
+    width: 100%;
+    background: var(--purple-gradient);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 10px 25px rgba(127, 0, 255, 0.2);
+}
+
+.header-wallet h2 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* TARJETA DE FORMULARIO (CENTRADA Y FLOTANTE) */
+.container-retiro {
+    width: 90%;
+    max-width: 400px;
+    margin: -40px auto 40px auto; /* Centrado horizontal y sube 40px */
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* ESTILOS DE FORMULARIO */
+.form-group label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 25px 15px; /* Más espacioso para móviles */
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    border-color: var(--purple-main);
+    outline: none;
+}
+
+/* BOTÓN DE RETIRO PERSONALIZADO */
+.btn-withdraw {
+    width: 100%;
+    background: var(--warm-gradient);
+    border: none;
+    padding: 16px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(237, 28, 36, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+    margin-top: 10px;
+}
+
+.btn-withdraw:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.btn-withdraw:active {
+    transform: translateY(0);
+}
+
+/* BOTÓN VOLVER */
+.btn-secondary {
+    display: block;
+    width: 100%;
+    background-color: transparent !important;
+    border: 2px solid #eee !important;
+    color: #888 !important;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    color: var(--purple-main) !important;
+    border-color: var(--purple-main) !important;
+    background-color: #fcfaff !important;
+}

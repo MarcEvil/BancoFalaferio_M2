@@ -1,0 +1,116 @@
+/* Paleta de colores unificada */
+:root {
+    --purple-main: #6a11cb;
+    --purple-gradient: linear-gradient(180deg, #7f00ff, #e100ff);
+    --bg-light: #fcfcfc;
+    --white: #ffffff;
+    --indigo-soft: #e0d4ff;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado Púrpura */
+.header-wallet {
+    background: var(--purple-gradient);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 10px 25px rgba(127, 0, 255, 0.2);
+}
+
+/* Contenedor Principal */
+.container-send {
+    max-width: 500px;
+    margin: -20px auto 40px; /* Sube un poco para solapar el header */
+    background: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilo de Lista de Contactos */
+.list-group-item {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px !important;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.list-group-item:hover {
+    background-color: var(--indigo-soft);
+}
+
+.list-group-item.active {
+    background: var(--purple-gradient) !important;
+    border-color: transparent !important;
+    transform: scale(1.02);
+}
+
+/* Inputs Estilizados */
+.form-control {
+    border-radius: 12px;
+    padding: 20px 15px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    border-color: var(--purple-main);
+}
+
+/* Botones Principales */
+.btn-primary {
+    background: var(--purple-gradient) !important;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(127, 0, 255, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--purple-main);
+    border: 2px solid var(--purple-main);
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--purple-main);
+    color: white;
+}
+
+/* MODAL Y OVERLAY */
+.modal-custom {
+    display: none; 
+    position: fixed; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: white; 
+    padding: 30px; 
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4); 
+    z-index: 1000; 
+    width: 0%; 
+    max-width: 400px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px); /* Efecto de desenfoque de fondo */
+    z-index: 999;
+}
