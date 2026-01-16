@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Retirar</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/retiro.css">
+</head>
+<body>
+
+  <div class="header-wallet">
+    <h2>Retirar Dinero</h2>
+    <p class="text-white-50">Ingresa el monto que deseas retirar</p>
+  </div>
+
+  <div class="container-retiro">
+    <form id="formRetiro">
+      <div class="form-group">
+        <label for="retirarMonto">Monto a retirar:</label>
+        <div class="input-group">
+            <input type="number" class="form-control" id="retirarMonto" placeholder="$ 0.00" required>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-withdraw" id="btnRealizarRetiro">
+          Realizar Retiro
+      </button>
+    </form>
+
+    <a href="menu.html" class="btn btn-secondary text-center">
+        Volver al Menú
+    </a>
+  </div>
+
+  <script src="/assets/js/retiro.js"></script>
+</body>
+</html>
