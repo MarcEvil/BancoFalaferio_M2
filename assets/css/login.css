@@ -48,7 +48,7 @@ h2 {
     background-color: #fff;
 }
 
-#btnLog {
+#btnLog, #btnReg{
     width: 100%; /* El botón ocupa todo el ancho en móviles */
     padding: 15px;
     border-radius: 15px;
@@ -66,7 +66,11 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(127, 0, 255, 0.4);
 }
+#btnReg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 0, 255, 0.4);
+}
 
-#btnLog:active {
+#btnLog, #btnReg:active {
     transform: translateY(0);
 }
